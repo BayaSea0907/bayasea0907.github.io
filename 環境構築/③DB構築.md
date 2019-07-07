@@ -2,7 +2,7 @@
 
 ***
 
-※ 参考: https://qiita.com/nooboolean/items/7efc5c35b2e95637d8c1
+※ 参考: https://qiita.com/nooboolean/items/7efc5c35b2e95637d8c1<br>
 ※ 参考2:  https://centossrv.com/mariadb.shtml
 
 ※ mysqlの保存先は、/usr/libexec/mysqld
