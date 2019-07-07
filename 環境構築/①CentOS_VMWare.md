@@ -5,7 +5,7 @@ https://www.adoc.co.jp/blog/e000289.html
 ----------------------------------------------------------------------------------------
 ◇ 目次
 
-1. CentOSインストール
+1. CentOSインストール (AWSの場合は気合と根性で。参考: https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/putty.html)
 2. Rbenv導入
 3. Ruby導入
 4. Rails導入
@@ -13,7 +13,7 @@ https://www.adoc.co.jp/blog/e000289.html
 6. Railsサーバー...起動したけど開けない。環境構築②へ。
 
 ----------------------------------------------------------------------------------------
-◇ 導入手順
+◇ CentOS導入手順 (VMWare)
 
 1. rootログイン
    - ssh root@localhost -y
