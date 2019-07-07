@@ -1,8 +1,4 @@
-# Rails環境構築
-
-***
-
-### ① CentOS_VMWare
+# ① CentOS_VMWare
 ※ これめちゃめちゃ分かりやすい。
 https://www.adoc.co.jp/blog/e000289.html
 
