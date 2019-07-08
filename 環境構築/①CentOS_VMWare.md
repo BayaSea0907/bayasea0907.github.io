@@ -41,7 +41,7 @@ https://qiita.com/ksugawara61/items/e3bb87d5e0dd49d20c8f
 
 
 1. 必要パッケージをインストール
-   - sudo yum install -y git gcc bzip2 pcre pcre-devel openssl openssl-devel readline-devel telnet libaio zlib-devel
+   - sudo yum install -y git gcc bzip2 pcre pcre-devel openssl openssl-devel readline-devel telnet libaio zlib-devel nodejs nodejs-devel
    (※「sudo yum search pcre」とかもできます。)
 
 2. rbenvのインストール (Githubからインストール)
