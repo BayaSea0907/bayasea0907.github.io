@@ -1,11 +1,11 @@
-# ① CentOS_VMWare
+# ① AWS RedHat Enterprise Linux 
 ※ これめちゃめちゃ分かりやすい。
 https://www.adoc.co.jp/blog/e000289.html
 
 ----------------------------------------------------------------------------------------
 ◇ 目次
 
-1. 環境構築の準備(AWS RedHat Enterprise Linux )
+1. 環境構築の準備(AWS RedHat Enterprise Linux)
 2. Rbenv導入
 3. Ruby導入
 4. Rails導入
