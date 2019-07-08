@@ -18,7 +18,7 @@ https://www.adoc.co.jp/blog/e000289.html
 1. rootログイン
    - ssh root@localhost -y
 
-2, sudoの設定
+2. sudoの設定
    - 「visudo」を実行
    - 「root ALL=(ALL) ALL」の下あたりに、「user_name ALL = (ALL) ALL」を追加。
 
