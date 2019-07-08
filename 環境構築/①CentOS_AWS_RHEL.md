@@ -1,6 +1,4 @@
 # ① AWS RedHat Enterprise Linux 
-※ これめちゃめちゃ分かりやすい。
-https://www.adoc.co.jp/blog/e000289.html
 
 ----------------------------------------------------------------------------------------
 ◇ 目次
@@ -34,7 +32,7 @@ https://qiita.com/ksugawara61/items/e3bb87d5e0dd49d20c8f
 
 
 1. 必要パッケージをインストール
-   - `sudo yum install -y git gcc bzip2 pcre pcre-devel openssl openssl-devel readline-devel telnet libaio zlib-devel`
+   - `sudo yum install -y git gcc bzip2 pcre pcre-devel openssl openssl-devel readline-devel telnet libaio zlib-devel nodejs nodejs-devel`
    (※「sudo yum search pcre」とかもできます。)
 
 2. rbenvのインストール (Githubからインストール)
@@ -70,14 +68,14 @@ https://qiita.com/ksugawara61/items/e3bb87d5e0dd49d20c8f
 ----------------------------------------------------------------------------------------
 ◇ Railsの導入
 
-1. gem install --no-rdoc rails
+1. `gem install --no--document rails`
 
-2. gem install bundler
+2. `gem install bundler`
 
-3. rbenv rehash
+3. `rbenv rehash`
 
 4. rails -vで導入されていればOK
-   - rails new project_name --skip-bundleでプロジェクト作成。
+   `rails new project_name` でプロジェクト作成。
 
 ----------------------------------------------------------------------------------------
 ◇ Gitの導入
