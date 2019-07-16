@@ -5,7 +5,7 @@
 ### .vimrcの書き方
 ※ vim_scriptは、commandの羅列
 
-* 'let'
+* let
   - 代入。`let a = 1`で、aに1を代入
 
 * `"`
@@ -14,15 +14,17 @@
 * `source ~/script.vim`
   - vimの実行。`vim -S ~/script.vim`で、shellからも実行できる
 
-* 'function, function!'
+* function, function!
   - 
   ```java
     function Sum(v1, v2)
-      return v1, v2
+      return a:v1, a:v2  " 「a:」にはスコープを指定する役割阿があるらしい...
     endfunction
    ```
+* set, autcmd, syntax, ni, call, plug, augroup, colorscheem, filetype
+  - -----------------------------ここから------------------------------
 
-* map
+* `map`
   -  キーマッピング。`map <C-e>:NERDTreeToggle<CR>` で、`Ctrl + e`を押した時に、<br>
 `:NERDTreeTogle`のvimコマンドを実行するって意味になる
   - '<CR>'は、キャリッジリターンの略。<Return>, <Enter>も同じ効果
