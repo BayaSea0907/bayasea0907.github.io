@@ -42,3 +42,12 @@
   - alt, meta(mac)
 * <D-...>
   - Macのcommand
+
+***
+
+### 実際に導入していく
+* `sudo yum install -y vim vi`を実行
+  - `vim`コマンドが聞くようになる。`.vimrc`, `.viminfo`が作成される
+* NERDTreeを導入 (ディレクトリツリーから選択できる機能)
+  - 下記を参考にして作業を行う
+    https://qiita.com/zwirky/items/0209579a635b4f9c95ee
