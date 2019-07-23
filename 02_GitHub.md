@@ -32,7 +32,7 @@
     → コピーした公開鍵をGitHubにペーストして、アップロードする(ドラッグ&ドロップ)
 
   - ssh-addをする
-    → 「eval `ssh-agent`」
+    → 「eval `ssh-agent`」# ssh-agentは、パスワード入力の短縮とかにも使えるらしい...
 　　→ 「ssh-add ~/.ssh/[secret_key_name]」
     → 「ssh-add -l」#=> 2048 xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx hoge/fuga (RSA)
 　　　  ※ ここまでできればOK
@@ -40,7 +40,7 @@
   - 接続テスト
     → 「ssh -vT git@github.com」
         (成功) #=> Hi BayaSea! You've successfully authenticated, but GitHub does not provide shell access.
-	      (失敗) #=> git@github.com: Permission denied (publickey).
+	(失敗) #=> git@github.com: Permission denied (publickey).
    
   - Railsプロジェクト作成
     → 「rails new <name>」
