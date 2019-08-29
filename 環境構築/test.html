@@ -1,0 +1,44 @@
+<div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
+  <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1><a id="user-content-aws_ec2インスタンス作成" class="anchor" aria-hidden="true" href="#aws_ec2インスタンス作成"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⓪AWS_EC2インスタンス作成</h1>
+    <hr>
+    <h3><a id="user-content-aws登録からサーバー構築まで" class="anchor" aria-hidden="true" href="#aws登録からサーバー構築まで"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AWS登録か>ら、サーバー構築まで</h3>
+    <p>①. AWSを登録する
+      ②. 右上の<code>アカウント名</code>をクリックして、<code>マイセキュリティ資格情報</code>を選択</p>
+    <ul>
+      <li>多要素認証(Mulutiple Factor Authenticate)を設定</li>
+      <li>GoogleAuthenticatorを選択して、モバイルアプリからQRコードを読み込む</li>
+      <li>読み込んだら、表示されたKeyを入力</li>
+      <li>入力後、1分後に新しいKeyに切り替わるので、また入力</li>
+      <li>登録完了</li>
+    </ul>
+    <p>③. 右上の<code>アカウント名</code>をクリックして、<code>マイアカウント</code>を選択</p>
+    <ul>
+      <li>サイドバーの<code>Budgets</code>から、請求金額アラートを設定</li>
+      <li>自分の場合だと、最大3ドルまでというアラートと、最大の半分に達したときにアラートが出るように設定している</li>
+    </ul>
+    <p>④. サービスから<code>EC2</code>を選択して、インスタンス作成を行う</p>
+    <ul>
+      <li><code>RedHat Enterprise Linux</code>を選択</li>
+      <li>ストレージなど、無料枠で適当に選んでいって作成</li>
+    </ul>
+    <p>⑤. セキュリティグループ(default)の設定</p>
+    <ul>
+      <li>SSHを追加し、<code>ソース</code>の部分に、接続したいPCのグローバルIPを入力</li>
+      <li>RailsServerを立ち上げた際にアクセスするために、<code>カスタムTCP</code>を追加。<code>ポート</code>はサーバー立ち上げ時に指定する。(※ 80~1023は予約>済み)
+        <code>ソース</code>は<code>0.0.0.0/0</code>ですべてのIPを許可。</li>
+      <li>default以外のセキュリティグループの設定を追加した場合は、<code>インスタンス</code>のメニューから、セキュリティグループの関連付けを行って完了</li>
+    </ul>
+    <p>⑥. <code>Elastic IP</code>を割り当て。(※ お金がかかる)</p>
+    <ul>
+      <li>割り当てが完了したら、<code>アドレスの関連付け</code>を選択して、インスタンスと関連付けを行う</li>
+    </ul>
+    <p>⑦. 設定の準備が終わったら、インスタンスを起動</p>
+    <p>⑧. インスタンス起動が完了(2/2チェックに合格)したら、アクセスする</p>
+    <ul>
+      <li>サイドバーの<code>ネットワーク&amp;セキュリティー</code>のドロップボックスから<code>キーペア</code>を選択</li>
+      <li><code>キーペアの作成</code>を行うと、<code>キーペア名.pem</code>がダウンロードされる</li>
+      <li>PuTTYを開き、下記を参考に接続作業を行う                                                                                                                    <a href="https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/putty.html" rel="nofollow">https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/putty.html</a>
+        (※ Elastic IPの設定が完了していた場合、HostNameは<code>ec2user@[elastic_ip]</code>でもアクセスできる)</li>
+    </ul>
+  </article>
+</div>
