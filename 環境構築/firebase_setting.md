@@ -54,4 +54,7 @@ https://qiita.com/Hiroyuki1993/items/1ab9266ca6fc422113e3
     - サーバー側の処理を記述する
     - 言語はjavascript。依存パッケージも一緒にインストールする
     - `firebase serve --only functions,hosting`でデバッグできると思われる。多分オプションなしでも大丈夫
+  * firestoreは、ルートディレクトリにファイルを作成する
+    - firebase console(web)でDatabaseの項目を選択して、データベースを作成する。ロケーションは「	asia-northeast1(Tokyo)」
+    
 
