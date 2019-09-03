@@ -40,4 +40,5 @@ https://qiita.com/Ijoru/items/5b27f1c32df2222514fb
    ```
   * hostingは、hostingディレクトリ作って、保存
   * funtcionsは、functionsディレクトリ作って保存
+    - 言語はjavascript。依存パッケージも一緒にインストールする
 
