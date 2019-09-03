@@ -33,9 +33,11 @@ https://qiita.com/Ijoru/items/5b27f1c32df2222514fb
 
   ? Which Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices. (Press <space> to select, <a> to toggle all, <i> to invert selection)
   ❯◯ Database: Deploy Firebase Realtime Database Rules
-   ◯ Firestore: Deploy rules and create indexes for Firestore
-   ◯ Functions: Configure and deploy Cloud Functions
-   ◯ Hosting: Configure and deploy Firebase Hosting sites
-   ◯ Storage: Deploy Cloud Storage security rules
+   □ Firestore: Deploy rules and create indexes for Firestore
+   □ Functions: Configure and deploy Cloud Functions
+   □ Hosting: Configure and deploy Firebase Hosting sites
+   □ Storage: Deploy Cloud Storage security rules
    ```
+  * hostingは、hostingディレクトリ作って、保存
+  * funtcionsは、functionsディレクトリ作って保存
 
