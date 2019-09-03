@@ -1,9 +1,18 @@
 # firebaseを使う
 
 ※ 参考: 
+* npmについて
 https://www.webprofessional.jp/beginners-guide-node-package-manager/
+* 仮想環境からfirebase-toolsをインストールするとき
 https://qiita.com/Orangelinux/items/2a8cb318d06e3b78c8cb
+* ホスティングを行うまで
 https://qiita.com/Ijoru/items/5b27f1c32df2222514fb
+* ディレクトリ構成
+https://qiita.com/tag1216/items/6901a200997792dd378c
+* 入力フォーム & メール送信機能を実装する
+https://qiita.com/Hiroyuki1993/items/1ab9266ca6fc422113e3
+
+
 ***
 
 ### FireBaseにログインする
@@ -39,6 +48,10 @@ https://qiita.com/Ijoru/items/5b27f1c32df2222514fb
    □ Storage: Deploy Cloud Storage security rules
    ```
   * hostingは、hostingディレクトリ作って、保存
+    - ルーティングの役割を果たす...?
+    - 静的ページの配置もここにする
   * funtcionsは、functionsディレクトリ作って保存
+    - サーバー側の処理を記述する
     - 言語はjavascript。依存パッケージも一緒にインストールする
+    - `firebase serve --only functions`でデバッグできると思われる
 
