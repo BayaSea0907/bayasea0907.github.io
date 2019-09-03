@@ -53,5 +53,5 @@ https://qiita.com/Hiroyuki1993/items/1ab9266ca6fc422113e3
   * funtcionsは、functionsディレクトリ作って保存
     - サーバー側の処理を記述する
     - 言語はjavascript。依存パッケージも一緒にインストールする
-    - `firebase serve --only functions`でデバッグできると思われる
+    - `firebase serve --only functions`でデバッグできると思われる。多分オプションなしでも大丈夫
 
