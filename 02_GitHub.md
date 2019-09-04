@@ -40,13 +40,14 @@
   - 接続テスト
     → 「ssh -vT git@github.com」
         (成功) #=> Hi BayaSea! You've successfully authenticated, but GitHub does not provide shell access.
-	(失敗) #=> git@github.com: Permission denied (publickey).
+	(失敗) #=> git@github.com: Permission denied (publickey). 
+		⇒ ※ config, id_rsaとかの権限に問題があると思われる。https://sekisuiseien.com/computer/11256/
    
   - Railsプロジェクト作成
     → 「rails new <name>」
 
   - リポジトリ追加
-    → 「git remote add <リモート名> git@github.com:BayaSea0907/life_task.git(URL)」
+    → 「git remote add <リモート名> git@github.com:BayaSea0907/life_task.git」(※ URL)
 
   - プッシュ
     → 「git add .」、「git commit .」、「git push <リモート名> master」(first commitのみmasterをpush)
