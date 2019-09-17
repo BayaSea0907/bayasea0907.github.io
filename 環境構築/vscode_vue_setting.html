@@ -1,15 +1,22 @@
 <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
   <h1>VSCode + Vue 設定</h1>
   
-  <p>環境構築</p>
+  <p><b>環境構築</b></p>
   <ul>
     <li><a href="https://github.com/BayaSea0907/bayasea0907.github.io/blob/master/02_GitHub.md">GitHubを設定しておく</a></li>
     <li><a href="https://code.visualstudio.com/">VSCodeをインストール<a/></li>
-    <li><a href="https://nodejs.org/ja/">node.jsをインストール</a><small>※ CドライブのProgramFilesにインストールする</small></li>
+    <li>
+      <li><a href="https://nodejs.org/ja/">nodejsをインストール</a><small>※ CドライブのProgramFilesにインストールする</small></li>
+      <li>node --version<small>(インストールしたnodejsのバージョンを表示)</small></li>
+      <li>npm install --global(npmをインストール)<small>※ --globalで、どこからでもnpmを使えるようにする。書かないとinstallをしたフォルダでしか使えない。</small></li>
+      <li>npm install vue-cli --global(vueをインストール)</li>
+      <li>npm install nuxt --global(nuxtをインストール)</li>
+    </li>
   </ul>
   
-  <p>コマンド</p>
+  <p><b>コマンド</b></p>
   <ul>
-    <li>npm run dev</li>
+    <li>npm run dev(nuxtサーバー起動)</li>
+    <li>npm run generate<small>※ vueファイルをhtmlファイルに変換 & ルーティング生成</small></li>
   </ul>
 </div>
