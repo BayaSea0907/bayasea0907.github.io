@@ -21,8 +21,8 @@
 ### rbenv
 * rubyのバージョン管理ツール
 * command
-* * rbenv global versionで、ユーザー全体が使用するrubyのバージョンを設定
-* * rbenv local versionで、カレントディレクトリ以下のバージョンを設定 (カレントディレクトリに.ruby-version ファイルを書き出す)
+  * rbenv global versionで、ユーザー全体が使用するrubyのバージョンを設定
+  * rbenv local versionで、カレントディレクトリ以下のバージョンを設定 (カレントディレクトリに.ruby-version ファイルを書き出す)
 
 ***
 
