@@ -80,13 +80,12 @@
     | character_sets_dir       | /usr/share/mysql/charsets/ |
     +--------------------------+----------------------------+
 ```
-
-    ※ character_set_client     : クライアント側で発行したsql文はこの文字コードになる
-    ※ character_set_connection : クライアントから受け取った文字をこの文字コードへ変換する
-    ※ character_set_database   : 現在参照しているDBの文字コード
-    ※ character_set_results    : クライアントへ送信する検索結果はこの文字コードになる
-    ※ character_set_server     : DB作成時のデフォルトの文字コード
-    ※ character_set_system     : システムの使用する文字セットで常にutf8が使用されている
+	※ character_set_client     : クライアント側で発行したsql文はこの文字コードになる
+	※ character_set_connection : クライアントから受け取った文字をこの文字コードへ変換する
+	※ character_set_database   : 現在参照しているDBの文字コード
+	※ character_set_results    : クライアントへ送信する検索結果はこの文字コードになる
+	※ character_set_server     : DB作成時のデフォルトの文字コード
+	※ character_set_system     : システムの使用する文字セットで常にutf8が使用されている
 
    * 設定する。
 
