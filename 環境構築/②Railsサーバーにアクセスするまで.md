@@ -35,7 +35,7 @@ https://qiita.com/NaokiIshimura/items/888d77f924877e5dc5e0
   `systemctl start nginx`
 
 * ファイアーウォールを停止する
-  `systemctl stop nginx`
+  `systemctl stop firewall.d`
 
 * ローカルIPでnginxの画面に入れるようになる
   http://xxx.xxx.xxx.xxx
