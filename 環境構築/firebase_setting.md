@@ -49,7 +49,7 @@ https://qiita.com/Hiroyuki1993/items/1ab9266ca6fc422113e3
    □ Hosting: Configure and deploy Firebase Hosting sites
    □ Storage: Deploy Cloud Storage security rules
    ```
-  * hostingは、distディレクトリ作って、保存
+  * hostingは、pagesディレクトリ作って、保存
     - 後々、vueでbuildしたときに、ここにファイルを生成するようにする    
   * funtcionsは、functionsディレクトリ作って保存
     - サーバー側の処理を記述する
