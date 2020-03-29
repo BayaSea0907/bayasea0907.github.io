@@ -16,17 +16,6 @@ https://qiita.com/Hiroyuki1993/items/1ab9266ca6fc422113e3
 ***
 
 ### FireBaseにログインする
-* cinsoleで`node`を入力。
- ```こんな画面が出ればOK
-  >.help
-  .break Sometimes you get stuck, this gets you out
-  .clear Alias for .break
-  .exit  Exit the repl
-  .help  Show repl options
-  .load  Load JS from a file into the REPL session
-  .save  Save all evaluated commands in this REPL session to a file
-  >.exit
-  ```
 * fierbase-tools(FirebaseCLI)をインストール
   - >sudo npm install -g firebase-tools
 * インストール出来たら、ログイン
