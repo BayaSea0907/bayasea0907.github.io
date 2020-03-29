@@ -19,7 +19,7 @@ https://qiita.com/Hiroyuki1993/items/1ab9266ca6fc422113e3
 * fierbase-tools(FirebaseCLI)をインストール
   - >sudo npm install -g firebase-tools
 * インストール出来たら、ログイン
-  - >firebase login --no-localhost
+  - >firebase login --no-localhost # --no-localhostをつけると、ターミナルで認証可能
   
 ### FireBaseのプロジェクトを初期化
 * 好きなディレクトリに入って、初期化
