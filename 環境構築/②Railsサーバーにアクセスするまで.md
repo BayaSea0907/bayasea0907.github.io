@@ -29,7 +29,7 @@ https://qiita.com/NaokiIshimura/items/888d77f924877e5dc5e0
 ◇ nginxの導入
 
 * インストールする
-  `sudo yum install -y nginx」`
+  `sudo yum install -y nginx`
 
 * nginxを起動する
   `systemctl start nginx`
