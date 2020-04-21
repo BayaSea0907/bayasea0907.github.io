@@ -44,7 +44,8 @@ https://qiita.com/NaokiIshimura/items/888d77f924877e5dc5e0
 ◇　DBを準備
 
 * DBサーバー起動に必要なパッケージをインストールする
-  `yum install -y mysql2 openssl-devel`
+  * `yum install -y mysql2 openssl-devel`
+  * Mac homebrewの場合: `brew install mysql` でopensslもインストールされる
 
 * DBを用意する
 
