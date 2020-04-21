@@ -96,7 +96,7 @@
      +--------------------------+----------------------------+
     ```
 
-### 10. ユーザを作成
+## 10. ユーザを作成
 * 全DBへのアクセス権限を持ったユーザーを作成。(rootユーザーで作成)
   `grant all privileges on test.* to user_name@localhost identified by 'user_pwd';`
 
