@@ -41,7 +41,7 @@
 ## 7. ルートパスワードを設定 (※ 8文字以上 && 4種類以上の文字)
 * ログインした後、`SET PASSWORD = PASSWORD('Password')`を実行。
 
-## 8. 文字コードを設定 
+## 8. 文字コードを設定 (utf8mb4で合わせる)
 * まずは確認する
    ```bash
    mysql> show variables like "character_set%";
