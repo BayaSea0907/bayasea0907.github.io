@@ -155,7 +155,7 @@
       ```
 ***
 
-### DB操作メモ
+# DB操作メモ
 
 ◆ バージョンの確認
 → 「select varsion();」
@@ -268,7 +268,8 @@ update stream_infos set created_at += '09:00:00';
 ※「ON」は、条件。
 ※ innerは、「user.id = item.id」の場合、「idが同じレコード」のみを取得する。
 
-・テーブル「user」
+・テーブル「users」
+```
 +------+-----------+
 | id   | name      |
 +------+-----------+
@@ -285,8 +286,10 @@ update stream_infos set created_at += '09:00:00';
 | NULL | NULL      |
 |   11 | NULL      |
 +------+-----------+
+```
 
-・テーブル「item」
+・テーブル「items」
+```
 +------+-----------+
 | id   | item_name |
 +------+-----------+
@@ -301,11 +304,13 @@ update stream_infos set created_at += '09:00:00';
 |    9 | iphone6s  |
 |   10 | iphoneX   |
 +------+-----------+
+```
 =========================
 ◇ 内部結合「inner join」
 「select user.id, user.name, item.item_name from tableName1 inner join tableName2 on tableName1.id = tableName2.id;」
 
 →この場合、「一致したレコード」のみ取得できる。
+```
 +------+-----------+-----------+
 | id   | name      | item_name |
 +------+-----------+-----------+
@@ -320,6 +325,7 @@ update stream_infos set created_at += '09:00:00';
 |    9 | D.Takada  | iphone6s  |
 |   10 | error!!   | iphoneX   |
 +------+-----------+-----------+
+```
 
 =========================
 ◇ 外部結合
@@ -330,6 +336,7 @@ update stream_infos set created_at += '09:00:00';
 「select * from tableName1 left outer join tableName2 on tableName1.id=tableName2.id;」
 
 →この場合、「一致したレコード」+ leftに指定したuserテーブルの「全レコード」を取得する。(※ NULLで一致してないけど、表示してるよ!!!)
+```
 +------+-----------+-----------+
 | id   | name      | item_name |
 +------+-----------+-----------+
@@ -346,7 +353,7 @@ update stream_infos set created_at += '09:00:00';
 | NULL | NULL      | NULL      |
 |   11 | NULL      | NULL      |
 +------+-----------+-----------+
-
+```
 
 
 ◆ 右外部結合「right outer join」
@@ -354,7 +361,7 @@ update stream_infos set created_at += '09:00:00';
 
 →この場合、「一致したレコード」+ rightに指定したテーブルの「全レコード」を取得する。
 (※ rightのitemテーブルのカラムは10個しかないので、それ以下は消えたよ!!!)
-
+```
 +------+-----------+-----------+
 | id   | name      | item_name |
 +------+-----------+-----------+
@@ -369,6 +376,7 @@ update stream_infos set created_at += '09:00:00';
 |    9 | D.Takada  | iphone6s  |
 |   10 | error!!   | iphoneX   |
 +------+-----------+-----------+
+```
 
 ----------------------------------
 ◇ より快適なDB操作を実現するために...
@@ -381,26 +389,30 @@ update stream_infos set created_at += '09:00:00';
 
 ※ インデックスの使用状況などが分かる。参考: https://qiita.com/kzbandai/items/ea02727f4bb539fcedb5
 ※ Extraに、使われた検索方法が書かれる。
+```
 +------+-------------+-------+------+---------------+------+---------+------+------+-------------+
 | id   | select_type | table | type | possible_keys | key  | key_len | ref  | rows | Extra       |
 +------+-------------+-------+------+---------------+------+---------+------+------+-------------+
 |    1 | SIMPLE      | user  | ALL  | NULL          | NULL | NULL    | NULL |   12 | Using where |
 +------+-------------+-------+------+---------------+------+---------+------+------+-------------+
-
+```
 
 ◆ インデックスの設定を見る ... 「show index from tableName;」
 
 ※ Key_nameがインデックスの名前。
+```
 +-------+------------+------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
 | Table | Non_unique | Key_name   | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
 +-------+------------+------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
 | user  |          1 | user_index |            1 | id          | A         |          12 |     NULL | NULL   | YES  | BTREE      |         |               |
 +-------+------------+------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+```
 
 ----------------------------------
 ◇ グループ操作
 
 ・productsテーブル
+```
 +------+-------------+-------+
 | id   |  category   | value |
 +------+-------------+-------+
@@ -414,7 +426,7 @@ update stream_infos set created_at += '09:00:00';
 +------+-------------+-------+
 |    5 |           2 |     1 |
 +------+-------------+-------+
-
+```
 
 > select count(*) from products;
 #=> 6
@@ -422,6 +434,7 @@ update stream_infos set created_at += '09:00:00';
 ※ categoryのデータ毎に1グループとして、テーブルを作成
 > SELECT category, SUM(value) FROM products GROUP BY category;
 #=> 
+```
 +-------------+-------+
 |  category   | value |
 +-------------+-------+
@@ -429,3 +442,4 @@ update stream_infos set created_at += '09:00:00';
 +-------------+-------+
 |           2 |     5 |
 +-------------+-------+
+```
