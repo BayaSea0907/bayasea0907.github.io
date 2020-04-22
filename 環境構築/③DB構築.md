@@ -98,13 +98,14 @@
 
 ## 10. ユーザを作成
 * 全DBへのアクセス権限を持ったユーザーを作成。(rootユーザーで作成)
-  `grant all privileges on test.* to user_name@localhost identified by 'user_pwd';`
+   - `CREATE USER rails_practice@localhost IDENTIFIED BY 'xxxxxxxx';`
+   - `GRANT ALL ON rails_practice_production.* TO rails_practice;`
 
 * 確認
-  `select user from mysql.user`
+   `select user from mysql.user`
 
 * 権限確認
-  `show grants;`
+   `show grants;`
    ```
 	+-------------------------------------------------------------------------+
 	| Grants for web_conn@localhost                                           |
