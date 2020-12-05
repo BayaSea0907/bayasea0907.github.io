@@ -1,7 +1,7 @@
 # 自己紹介用HP
 
-URL：<br>
+URL:<br>
 https://bayasea0907.github.io
 
-WebGL
+WebGL:<br>
 https://bayasea0907.github.io/cube_rotation.html
