@@ -4,4 +4,4 @@ URL:<br>
 https://bayasea0907.github.io
 
 WebGL:<br>
-https://bayasea0907.github.io/cube_rotation.html
+https://bayasea0907.github.io/webgl/cube_rotation.html
