@@ -111,6 +111,9 @@
       	renderer.render(scene, camera);
       }
 
+      // アニメーション開始
+      animate();
+
       // -------------------------------------------------
       // BGM
       // -------------------------------------------------
@@ -131,10 +134,7 @@
         sound.setVolume( 0.5 );
       });
 
-      window.addEventListener('load', () => {
-        // アニメーション開始
-        animate();
-
+      window.addEventListener('pageshow', () => {
         // BGM再生
         sound.play();
       });
