@@ -1,7 +1,11 @@
 # 自己紹介用HP
 
-URL:<br>
+### URL
 https://bayasea0907.github.io
 
-WebGL:<br>
-https://bayasea0907.github.io/webgl/cube_rotation.html
+### WebGL
+* ただまわるやつ
+  * https://bayasea0907.github.io/webgl/cube_rotation.html
+
+* もっと回るやつ
+  * https://bayasea0907.github.io/webgl/cube_rotation_add_axes.html
