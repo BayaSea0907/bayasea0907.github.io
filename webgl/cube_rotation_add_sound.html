@@ -24,7 +24,7 @@
 
     </ul>
 
-		<script src="three.js"></script>
+		<script src="js/three.js"></script>
 		<script>
       // -------------------------------------------------
 			// カメラでシーンをレンダリングする
@@ -128,7 +128,7 @@
       // load a sound and set it as the Audio object's buffer
       const audioLoader = new THREE.AudioLoader();
       // audioLoader.load("https://bayasea0907.github.io/webgl/8beat.wav", function( buffer ) {
-      audioLoader.load("8beat.wav", function( buffer ) {
+      audioLoader.load("sounds/8beat.wav", function( buffer ) {
       	sound.setBuffer( buffer );
         sound.setLoop( true );
         sound.setVolume( 0.5 );
