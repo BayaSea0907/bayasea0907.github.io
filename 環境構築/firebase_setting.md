@@ -47,7 +47,7 @@ https://qiita.com/Hiroyuki1993/items/1ab9266ca6fc422113e3
   * firestoreは、ルートディレクトリにファイルを作成する
     - firebase console(web)でDatabaseの項目を選択して、データベースを作成する。ロケーションは「	asia-northeast1(Tokyo)」
     
- ### Node.js + Nuxt + Vueを使う
-  
-    
-
+### FireBaseのデプロイ
+  * `nuxt build` # 本番用の webpack を使用してアプリケーションをビルドおよび最適化する
+  * `nuxt genarate` # dist/ ディレクトリに静的ページをエクスポートする
+  * `firebase deploy` # ファイアベースにデプロイされる
