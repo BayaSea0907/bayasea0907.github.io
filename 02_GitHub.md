@@ -4,47 +4,8 @@
 ----------------------------------------------------------------------------------------
 ◇ Gitの導入 (Linux)
 
-● GitHub側作業
-
-  - アカウントを作成
-
-  - リモートリポジトリを作成
-
-  -  SSH Key 公開鍵をGitHubにアップロードする (※ id_rsa.pub)
- 　  (※ [User > Settigng > SSH and GPG keys] から登録)
-
-● ターミナル側作業
-
-  - パッケージのインストール
-    → 「sudo yum install git」
-
-  - SSH Keyを登録
-  - SSH Keyを生成
-    -  「cd ~/.ssh(既にある)」、「ssh-keygen -t rsa -b 4096」
-    	- ① 最初の入力で、key名 (例: id_rsa_github)
-    	- ② 2回目の入力で、パスワード
-    	- ③ パスワード再入力
-          (※ 生成されるファイル...id_rsa...秘密鍵(公開しちゃダメ)。id_rsa.pub...公開鍵)
-
-    → 公開鍵を確認&コピー
-       ⇒ 「cat id_rsa_github」
-
-    → コピーした公開鍵をGitHubにペーストして、アップロードする(ドラッグ&ドロップ)
-
-  - ssh-addをする
-    → 「eval `ssh-agent`」# ssh-agentは、パスワード入力の短縮とかにも使えるらしい...
-　　→ 「ssh-add ~/.ssh/[secret_key_name]」
-    → 「ssh-add -l」#=> 2048 xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx hoge/fuga (RSA)
-　　　  ※ ここまでできればOK
-
-  - 接続テスト
-    → 「ssh -vT git@github.com」
-        (成功) #=> Hi BayaSea! You've successfully authenticated, but GitHub does not provide shell access.
-	(失敗) #=> git@github.com: Permission denied (publickey). 
-		⇒ ※ config, id_rsaとかの権限に問題があると思われる。https://sekisuiseien.com/computer/11256/
-   
-  - Railsプロジェクト作成
-    → 「rails new <name>」
+これをもとに環境構築を行う
+https://qiita.com/shiro01/items/e886aa1e4beb404f9038
 
   - リポジトリ追加
     → 「git remote add <リモート名> git@github.com:BayaSea0907/life_task.git」(※ URL)
