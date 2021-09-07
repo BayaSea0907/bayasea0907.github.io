@@ -19,11 +19,11 @@
     → 「sudo yum install git」
 
   - SSH Keyを登録
-    → SSH Keyを生成
-       ⇒ 「cd ~/.ssh(既にある)」、「ssh-keygen -t rsa -b 4096」
-           1. 最初の入力で、key名 (例: id_rsa_github)
-	   2. 2回目の入力で、パスワード
-           3. パスワード再入力
+  - SSH Keyを生成
+    -  「cd ~/.ssh(既にある)」、「ssh-keygen -t rsa -b 4096」
+    	- ① 最初の入力で、key名 (例: id_rsa_github)
+    	- ② 2回目の入力で、パスワード
+    	- ③ パスワード再入力
           (※ 生成されるファイル...id_rsa...秘密鍵(公開しちゃダメ)。id_rsa.pub...公開鍵)
 
     → 公開鍵を確認&コピー
