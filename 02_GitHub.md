@@ -5,7 +5,8 @@
 ◇ Gitの導入 (Linux)
 
 これをもとに環境構築を行う
-https://qiita.com/shiro01/items/e886aa1e4beb404f9038
+https://zenn.dev/yuri0427/articles/9587ae6a578ee9
+ローカル環境の既存のリポジトリ内にある 「.git/config」は削除する。
 
   - リポジトリ追加
     → 「git remote add <リモート名> git@github.com:BayaSea0907/life_task.git」(※ URL)
